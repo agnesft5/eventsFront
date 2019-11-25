@@ -1,0 +1,50 @@
+.loginRow{
+margin: 0 auto;
+margin-top: 4%;
+}
+.loginContainer{
+display: grid;
+border: 1px solid lightslategray;
+border-radius: .25rem;
+padding-left: 15%;
+padding-right: 15%;
+padding-top: 20%;
+padding-bottom: 20%;
+}
+.lds-facebook {
+display: inline-block;
+position: relative;
+width: 80px;
+height: 80px;
+}
+.lds-facebook div {
+display: inline-block;
+position: absolute;
+left: 8px;
+width: 16px;
+background: #444;
+animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+left: 8px;
+animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+left: 32px;
+animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+left: 56px;
+animation-delay: 0;
+}
+@keyframes lds-facebook {
+0% {
+    top: 8px;
+    height: 64px;
+}
+50%, 100% {
+    top: 24px;
+    height: 32px;
+}
+}
+

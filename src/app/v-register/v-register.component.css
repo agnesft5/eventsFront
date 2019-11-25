@@ -1,0 +1,13 @@
+.registerRow{
+    margin: 0 auto;
+    margin-top: 4%;
+}
+.registerContainer{
+    display: grid;
+    border: 1px solid lightslategray;
+    border-radius: .25rem;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}

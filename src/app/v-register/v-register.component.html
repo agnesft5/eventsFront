@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row w-50 registerRow">
+        <div class="col-12">
+            <h4 class="text-center mb-4">Register</h4>
+            <form class="registerForm" #registerForm>
+                <div class="form-group registerContainer">
+                    <input class="form-control mt-2 mb-2" type="text" #userInput="ngModel" name="userInput"
+                        [(ngModel)]="username" placeholder="Username" pattern="[a-zA-Z0-9]*" required>
+                    <input class="form-control mt-2 mb-2" type="password" #passwordInput="ngModel" name="passwordInput"
+                        [(ngModel)]="password" placeholder="Password" pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g"
+                        required>
+                    <button (click)="register()" type="reset" class="btn btn-dark mt-4 registerButton">Send</button>
+                    <button routerLink="/login" type="button" class="btn btn-link mt-5">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

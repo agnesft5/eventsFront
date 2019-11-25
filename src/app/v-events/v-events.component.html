@@ -1,0 +1,53 @@
+<header>
+    <nav class="navbar navbar-light bg-dark">
+        <h2 class="text-light mr-3">Events App</h2>
+        <form class="form-inline">
+            <button routerLink="/register" class="btn btn-outline-light my-2 my-sm-0 ml-3"
+                type="submit">Register</button>
+            <button routerLink="/login" class="btn btn-outline-light my-2 my-sm-0 ml-3" type="submit">Login</button>
+            <button routerLink="/events" class="btn btn-outline-light my-2 my-sm-0 ml-3" type="submit">Events</button>
+        </form>
+    </nav>
+</header>
+<main>
+    <div class="main__banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-0 col-md-3">
+                </div>
+                <div class="col-12 col-md-6 text-center">
+                    <h4 class="mt-5 mb-2">Add an event</h4>
+                    <form class="addEvent" #addEvent>
+                        <div class="form-group addEvent__container">
+                            <input [(ngModel)]="name" name="eventName" #eventName="ngModel" type="text"
+                                class="form-control mt-2" placeholder="Event name" required pattern="[a-zA-Z0-9]*">
+                            <input [(ngModel)]="location" name="eventLoc" #eventLoc="ngModel" type="text"
+                                class="form-control mt-2" placeholder="Event location" required pattern="[a-zA-Z0-9]*">
+                            <input [(ngModel)]="date" name="eventDate" #eventDate="ngModel" type="text"
+                                class="form-control mt-2" placeholder="Event date" required pattern="[a-zA-Z0-9]*">
+                            <input [(ngModel)]="hour" name="eventHour" #eventHour="ngModel" type="text"
+                                class="form-control mt-2" placeholder="Event hour" required>
+                            <input [(ngModel)]="price" name="eventPrice" #eventPrice="ngModel" type="text"
+                                class="form-control mt-2" placeholder="Event price" required>
+                            <button (click)="postEvent()" type="reset" class="btn btn-dark mt-2 w-25" style="margin:0 auto;">Send</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-0 col-md-3">
+
+                </div>
+                <div class="row" style="margin:0 auto; margin-top: 5%;">
+                    <div *ngFor="let event of arrEvents, let i = index" class="col-12 col-sm-4 col-lg-3">
+                        <div class="event__card mt-3 text-center">
+                            <h4>{{i+1}}. {{event['eventName']}}</h4>
+                            <p>{{event['location']}}</p>
+                            <p>{{event['price']}}</p>
+                            <p><small>{{event['eventDate']}}</small> | <small>{{event['time']}}</small></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
